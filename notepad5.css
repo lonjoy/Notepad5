@@ -1,0 +1,53 @@
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  border: 0;
+}
+[hidden] {
+  display: none;
+}
+html,
+body,
+#textarea {
+  height: 100%;
+}
+body {
+  display: none; /* until page loads */
+}
+#textarea {
+  padding: 1% 15% 0;
+  width: 100%;
+  color: #222;
+  vertical-align: top;
+  font: 18px/1.7 "Droid Sans Mono", sans-serif;
+  resize: none;
+}
+#textarea.statusBarOn {
+  height: calc(100% - 23px);
+}
+#status-bar {
+  padding: 3px 10px;
+  width: 100%;
+  height: 23px;
+  border-top: 1px solid #e4e4e4;
+  background: #f2f2f2;
+  box-shadow: 0 -1px #f2f2f2;
+  color: #666;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+@media print {
+  #textarea {
+    padding: 0;
+    height: 100% !important;
+  }
+  #status-bar { display: none; }
+}
+@font-face {
+  font-family: "Droid Sans Mono";
+  src: url(DroidSansMono.woff);
+}

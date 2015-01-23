@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Notepad5 v1.01, 20150123
+
+CACHE:
+index.html
+notepad5.css
+FileSaver.min.js
+notepad5.js
+DroidSansMono.woff
+favicon.ico
+
+NETWORK:
+*
