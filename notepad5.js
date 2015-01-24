@@ -20,7 +20,7 @@
     return document.getElementById(id);
   }
 
-  function skipSave() { // check whether to save or not
+  function skipSave() { // warning for saving doc
     if (!isModified || !textarea.value || confirm("You have unsaved changes that will be lost.")) {
       isModified = false;
       return true;
@@ -76,7 +76,7 @@
   }
 
   function showHideStatusBar(on) {
-    statusBar.hidden = !on; // making use of hidden attribute
+    statusBar.hidden = !on; // using hidden attribute
     textarea.className = on ? "statusBarOn" : "";
   }
 
@@ -125,13 +125,13 @@
 
   function init() {
     document.body.style.display = "block";
-    if (!window.File) { // likely unsupported browser
-      document.body.innerHTML = "<p>Sorry your browser isn't supported :(<br>Please upgrade to a <a href='http://browsehappy.com/'>modern browser</a>.</p>";
-      return; // dont proceed
-    }
     if (navigator.userAgent.match(/Mobi/)) { // likely mobile
-      document.body.innerHTML = "Sorry this app dont work on mobile phones :(";
+      document.body.innerHTML = "Sorry this app doesn't work on mobile browsers :(";
       return;
+    }
+    if (!window.File) { // likely unsupported browser
+      document.body.innerHTML = "<p>Sorry your browser isn't supported :(<br>Please upgrade to <a href='http://google.com/chrome'>Google Chrome</a>.</p>";
+      return; // dont proceed
     }
     var appdata = JSON.parse(localStorage.getItem("appdata"));
     if (appdata) {
@@ -204,7 +204,7 @@
   });
   document.addEventListener("drop", openDoc);
 
-  window.addEventListener("unload", storeData); // store data locally
+  window.addEventListener("unload", storeData); // store appdata locally
   window.addEventListener("load", init); // initialize
 
 }());

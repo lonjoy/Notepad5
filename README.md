@@ -30,4 +30,4 @@ The user interface is very simple, thus there is no GUI toolbar, all functions a
 - HTML 5
 - CSS
 - JavaScript
-- Also used FileSaver.js library and IcoMoon icon.
+- Also used [FileSaver.js](https://github.com/eligrey/FileSaver.js/) library and [IcoMoon icon](https://icomoon.io/).
